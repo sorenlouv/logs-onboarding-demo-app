@@ -1,5 +1,5 @@
 import { format, createLogger, transports } from 'winston';
-const { timestamp, combine, printf, errors, json } = format;
+const { timestamp, combine, printf, errors } = format;
 
 const logFormat = printf(({ level, message, timestamp, stack }) => {
   return `${timestamp} ${level}: ${stack || message}`;
